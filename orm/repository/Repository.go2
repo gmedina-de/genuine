@@ -1,0 +1,16 @@
+package repository
+
+// todo wait for go to have generics officially
+
+
+type Model interface {
+
+}
+
+type Repository2[M Model] interface {
+	Create(model M)
+	RetrieveAll() []M
+	RetrieveFirst(conditions ...interface{}) M
+	Update(model *M, column string, value interface{})
+	Delete(model *M)
+}

@@ -1,0 +1,30 @@
+package repository
+
+type databaseRepository[M interface{}] struct {
+
+}
+
+func DatabaseRepository() *databaseRepository {
+	return &databaseRepository{}
+}
+
+func (d databaseRepository[M]) Create(model *M) {
+	panic("implement me")
+}
+
+func (d databaseRepository[M]) RetrieveAll() []M {
+	panic("implement me")
+}
+
+func (d databaseRepository[M]) RetrieveFirst(conditions ...interface{}) M {
+	panic("implement me")
+}
+
+func (d databaseRepository[M]) Update(model *M, column string, value interface{}) {
+	panic("implement me")
+}
+
+func (d databaseRepository[M]) Delete(model *M) {
+	panic("implement me")
+}
+

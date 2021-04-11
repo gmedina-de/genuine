@@ -1,0 +1,51 @@
+package main
+
+import (
+	"fmt"
+	"reflect"
+)
+
+
+type Configuration interface {
+	Set(message string)
+}
+
+type MapConfiguration struct{
+
+}
+
+func (m MapConfiguration) Set(message string) {
+	panic("implement me")
+}
+
+type Log interface {
+	Log(message string)
+}
+
+type ConsoleLog[T Number] struct{
+	t T
+	s T
+}
+
+type Number interface {
+	type int,float32,string
+}
+
+func (c ConsoleLog) Log(message string) {
+	fmt.Println(message)
+}
+
+func test(test Number) {
+	fmt.Println(reflect.ValueOf(test))
+}
+
+func main() {
+
+	consoleLog := ConsoleLog{}
+	var log Log
+	log = consoleLog
+
+	mapConfiguration := MapConfiguration{}
+
+	test[Log, ConsoleLog](log, mapConfiguration)
+}
