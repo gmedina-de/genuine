@@ -7,14 +7,13 @@ import (
 	"github.com/geremde/genuine/http"
 	"github.com/geremde/genuine/http/router"
 	"github.com/geremde/genuine/http/server"
-	"github.com/geremde/genuine/orm/repository"
 	"github.com/geremde/genuine/protoapp/user"
 )
 
 func main() {
 	core.Constructor(log.ConsoleLog)
 	core.Constructor(configuration.MapConfiguration)
-	core.Constructor(repository.GormRepository)
+	core.Constructor(user.UserRepository)
 	core.Constructor(server.DefaultServer)
 	core.Constructor(router.DefaultRouter)
 	// todo allow arrays

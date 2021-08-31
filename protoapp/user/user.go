@@ -4,6 +4,6 @@ import "github.com/geremde/genuine/orm/model"
 
 type user struct {
 	model.Model
-	username string
+	Username string
 	password string
 }
