@@ -1,9 +1,6 @@
 package user
 
-import "github.com/geremde/genuine/orm/model"
-
-type user struct {
-	model.Model
+type User struct {
 	Username string
-	password string
+	Password string
 }

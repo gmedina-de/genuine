@@ -7,7 +7,7 @@ require (
 	github.com/geremde/genuine/http v0.0.0
 	github.com/geremde/genuine/orm v0.0.0
 	github.com/gotk3/gotk3 v0.5.1
-
+	github.com/joncalhoun/form v1.0.0
 	gorm.io/driver/sqlite v1.1.4
 	gorm.io/gorm v1.20.9
 )

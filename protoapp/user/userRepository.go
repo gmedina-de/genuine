@@ -15,7 +15,7 @@ func UserRepository() userRepository {
 	if err != nil {
 		panic("failed to connect database")
 	}
-	db.AutoMigrate(&user{})
+	db.AutoMigrate(&User{})
 	return userRepository{db}
 }
 
